@@ -12,7 +12,7 @@ The data of Inquiry Volume 311 is collected by phone calls and chats that citize
 - Monitor data pipelines for performance and detect any anomalies or issues.
 - Store validated data in a Trusted Zone for downstream analysis and reporting.
 
-![Data Discovery](https://github.com/Vijaya397/Project-2/blob/main/images_project2/Project2_Draw.io.jpg?raw=true)
+![image](https://github.com/Vijaya397/Project-2/blob/main/images_project2/Project2_Draw.io.jpg?raw=true)
 
 # Methodology
 ## 1. Data Encryption and Protection
