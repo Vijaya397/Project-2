@@ -12,7 +12,7 @@ The data of Inquiry Volume 311 is collected by phone calls and chats that citize
 - Monitor data pipelines for performance and detect any anomalies or issues.
 - Store validated data in a Trusted Zone for downstream analysis and reporting.
 
-![Data Discovery]( https://github.com/Vijaya397/Project-2/blob/main/images/Project2_Draw.io.jpg)
+![Data Discovery](https://github.com/Vijaya397/Project-2/blob/main/images_project2/Project2_Draw.io.jpg?raw=true)
 
 # Methodology
 ## 1. Data Encryption and Protection
@@ -20,11 +20,11 @@ AWS KMS stands for Key Management Service, a service through which users can cre
 
 SSE-KMS stands for Server-Side Encryption with AWS KMS, an extension of the encryption support provided for Amazon S3. In SSE-KMS, data is encrypted by default as they are saved in S3, and the encrypted data remains locked unless the users privileged with KMS permissions attempt to retrieve it. More features, such as crucial access and automatic key management, are integrated with monitoring tools that allow easy critical access and compliance tracking. The SSE-KMS data from the S3 is well protected; no unauthorized person can open and modify the data without permission.
 
-![Data Discovery]( https://github.com/Vijaya397/Project-2/blob/main/images/encryption.png)
+![Data Discovery](https://github.com/Vijaya397/Project-2/blob/main/images_project2/encryption.png?raw=true)
 
 AWS Backup further complements this by providing automated data backup in S3, ensuring data availability in case of failures or data corruption. KMS, SSE-KMS, and AWS Backup provide robust data protection, encryption, and recovery solutions that secure sensitive datasets like the City of Vancouver's 311 Inquiry Volume, ensuring data integrity and security across AWS environments. AWS Backup will be used to create regular backups of the data to maintain data availability. 
 
-![Data Discovery]( https://github.com/Vijaya397/Project-2/blob/main/images/S3%20Backup.png)
+![Data Discovery](https://github.com/Vijaya397/Project-2/blob/main/images_project2/S3%20Backup.png?raw=true)
 
 The primary bucket's backup has been established. It is clear from the convention of naming. Versioning and encryption are enabled using the same "lab role" key in my primary bucket.
 
@@ -34,7 +34,7 @@ CRR enhances disaster recovery by providing geographical redundancy, which is es
 
 The setup for replicating the 311 Inquiry Volume dataset across AWS regions is shown, safeguarding the data and ensuring it remains available even during regional failures.
 
-![Data Discovery]( https://github.com/Vijaya397/Project-2/blob/main/images/Replication.png)
+![Data Discovery](https://github.com/Vijaya397/Project-2/blob/main/images_project2/Replication.png?raw=true)
 
 ## 2. Data Governance
 Data governance is a rigorous process of overseeing data management in a lifecycle manner to optimize the data's quality, security, availability, and compliance. Some of these are verifying the quality of the data and checking if the data is correct and has all the attributes needed for the intended use. Data governance also entails controlling sensitive information like PII through encryption, masking, or redacting privacy standards.
@@ -51,16 +51,16 @@ Several Components used in designing the ETL process are:
 -	Change Schema: Some extra columns not used in the analysis were dropped; thus, the schema was changed. 
 -	Trusted Zone: The final transformed data are written in the secure folder and stored under the primary S3 bucket. 
 
-![Data Discovery](https://github.com/Vijaya397/Project-2/blob/main/images/ETL.png)
+![Data Discovery](https://github.com/Vijaya397/Project-2/blob/main/images_project2/ETL.png?raw=true)
 
 - Validated data will be stored in a secure Trusted Zone in AWS S3, serving as the final destination for analysis-ready data.
 
-![Data Discovery]( https://github.com/Vijaya397/Project-2/blob/main/images/Trusted.png)
+![Data Discovery](https://github.com/Vijaya397/Project-2/blob/main/images_project2/Trusted.png?raw=true)
 
 ## 4. Monitoring and Alerts
 In the 311 Inquiry Volume project context, AWS CloudWatch monitors the health and performance of the data pipelines that process and store inquiry data. It tracks key metrics, such as data processing times, pipeline throughput, and system resource utilization, ensuring the pipeline functions efficiently without bottlenecks or failures.
 
-![Data Discovery]( https://github.com/Vijaya397/Project-2/blob/main/images/monitoring%20and%20controlling.png)
+![Data Discovery](https://github.com/Vijaya397/Project-2/blob/main/images_project2/monitoring%20and%20controlling.png?raw=true)
 
 We could track and trace the expenses for every task completed during the project using monitoring dashboards.
 
@@ -68,24 +68,24 @@ CloudWatch Alarms are configured to trigger notifications when certain threshold
 
 In the event of excessive spending or strange activity, alarms were designed to sound.
 
-![Data Discovery](https://github.com/Vijaya397/Project-2/blob/main/images/Alarm.png)
+![Data Discovery](https://github.com/Vijaya397/Project-2/blob/main/images_project2/Alarm.png?raw=true)
 
 AWS CloudTrail will be used to log and audit all API calls and access to the dataset for security purposes.
 
-![Data Discovery]( https://github.com/Vijaya397/Project-2/blob/main/images/cloudtrail.png)
+![Data Discovery](https://github.com/Vijaya397/Project-2/blob/main/images_project2/cloudtrail.png?raw=true)
 
 CloudTrail automatically creates an S3 bucket to store logs that contain information about who accessed the data, what actions were performed, and who modified or deleted data. This ensures integrity and security, and the alarm configuration triggers alerts if suspicious activities are identified and ensures compliance with standards.
 5. Data Quality Validation
 The dataset will undergo rigorous validation checks to meet the highest data quality standards. A 100% completeness score will be achieved and validated through AWS Glue.
 We may examine the final dataset's quality via the data quality tab. For me, the quality was perfect.
 
-![Data Discovery]( https://github.com/Vijaya397/Project-2/blob/main/images/QRPR.png)
+![Data Discovery](https://github.com/Vijaya397/Project-2/blob/main/images_project2/QRPR.png?raw=true)
 
 Automated ETL jobs will ensure that the data remains up-to-date and accurate.
 
 In the 311 Inquiry Volume project, the workflow automates the entire data pipeline, from data ingestion to final storage in the Trusted Zone. The workflow uses AWS Glue to extract data from various sources and transform it by cleaning, validating, and loading it into Amazon S3. Each step will run automatically at regular intervals, ensuring the dataset remains current and accurate. This automated workflow minimizes manual intervention, reduces errors, and guarantees that the processed data is always ready for analysis. By scheduling tasks, the project achieves efficient, consistent data processing.
 
-![Data Discovery]( https://github.com/Vijaya397/Project-2/blob/main/images/workflow.png)
+![Data Discovery](https://github.com/Vijaya397/Project-2/blob/main/images_project2/workflow.png?raw=true)
 
 Workflow automates the process from data extraction to data storage in the Trusted Zone by scheduling each task regularly.
 # Tools and Technologies
