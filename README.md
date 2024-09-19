@@ -1,4 +1,5 @@
-# Project 2: Data Quality Control Initiative for the City of Vancouver 311 Inquiry Volume Dataset.
+# Project 2
+Data Quality Control Initiative for the City of Vancouver 311 Inquiry Volume Dataset.
 # Project Description 
 The Data Quality Control Initiative for the City of Vancouver 311 Inquiry Volume dataset guarantees that all the inquiry data information collected via phone and chat is reliable, accurate, and secure. Data governance is applied at each stage of data management through validation, encryption, and data quality, and this initiative ensures the data is constantly analyzed, secured from breaches, and kept for decision-making and operations to the highest standards.
 # Objective  
